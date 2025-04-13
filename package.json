@@ -1,0 +1,24 @@
+{
+  "name": "stat",
+  "version": "1.0.0",
+  "description": "Bionluk için discord stat bot dosyaları",
+  "main": "Index.js",
+  "scripts": {
+    "test": "node Index.js"
+  },
+  "author": {
+    "name": "Ali İhsan Çelik",
+    "email": "ali.taha.celik@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^2.4.3",
+    "@discordjs/voice": "^0.18.0",
+    "chalk": "^5.4.1",
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.7",
+    "lru-cache": "^11.0.2",
+    "mongodb": "^6.14.2",
+    "path": "^0.12.7"
+  }
+}

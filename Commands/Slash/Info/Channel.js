@@ -1,0 +1,37 @@
+"use strict";
+const {
+    SlashCommandBuilder,
+    ChatInputCommandInteraction
+} = require("discord.js");
+const Util = require("../../../Helpers/Util.js");
+const prefixCommand = require("../../Prefix/Info/Channel.js");
+
+module.exports = {
+    name: prefixCommand.name, // Komutun ismi
+    id: prefixCommand.id, // Komutun ID'si
+    data: new SlashCommandBuilder() // Komutun verileri
+        .setName(prefixCommand.name)
+        .setDescription(prefixCommand.description)
+        .addChannelOption(option =>
+            option.setName("channel")
+                .setDescription("Kanalı belirtin")
+                .setRequired(false)
+        ),
+
+    /**
+     * Parametrelerdeki isimlerin ne olduklarını tanımlar
+     * @param {ChatInputCommandInteraction} int - Slash komut etkileşimi
+     */
+    async execute(int) {
+        const channel = int.options.getChannel("channel") || int.channel; // Kanalı al
+
+        const message = Util.interactionToMessage(int, {
+            content: channel.id,
+            mentions: {
+                channel
+            }
+        });
+
+        return Util.getPrefixCommandWithId(this.id).execute(message, [channel.id]);
+    },
+};
