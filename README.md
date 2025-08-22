@@ -26,7 +26,7 @@ Merhaba! Bu proje, Discord sunucunuzdaki üye etkileşimlerini (ses ve mesaj) ta
 
 Projeyi bilgisayarınıza klonlayarak başlayın.
 ```bash
-git clone [https://github.com/pordarman/ultimate-stat-bot.git](https://github.com/pordarman/ultimate-stat-bot.git)
+git clone https://github.com/pordarman/ultimate-stat-bot.git
 cd ultimate-stat-bot
 ```
 
@@ -137,3 +137,4 @@ pm2 logs StatBot
 ## 🌟 Final Notu
 
 Bu bot ile sunucunuzun aktivitesini sayılara dökebilir ve topluluğunuzu daha iyi anlayabilirsiniz. Kod yapısı açık, geliştirilebilir ve modülerdir. Artık kontrol sizde! ✨
+
